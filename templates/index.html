@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <script>
+    <!--var img = document.createElement("img");-->
+
+    <!--img.src = "../static/img/test_graph.png";-->
+    <!--var src = document.getElementById("x");-->
+
+    <!--src.appendChild(img);-->
+
+    function add_img() {
+    console.log("inside")
+	var img = document.createElement('img');
+    img.src = '../static/img/new_graph.png';
+	document.getElementById('body').appendChild(img);
+}
+</script>
+</head>
+<body onload="add_img()">
+
+<h1>This is a Calculator</h1>
+<div id="body"></div>
+<div class="content">
+    <div class="form">
+        <form action="/math", method="post">
+            <label for="operation">Choose an operation</label>
+
+        <select id="operation", name="operation">
+            <option value="add">add</option>
+            <option value="subtract">subtract</option>
+            <option value="multiply">multiply</option>
+            <option value="divide">divide</option>
+        </select>
+        <input type="text", name="num1", id="num1">
+        <input type="text", name="num2", id="num2">
+        <input type="submit" value="Calculate">
+            </form>
+    </div>
+</div>
+</body>
+</html>
